@@ -1,0 +1,33 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Rubyland
+[*.rb]
+indent_style = space
+indent_size = 2
+
+[*.haml]
+indent_style = space
+indent_size = 2
+
+# Javascript
+[*.js]
+indent_style = space
+indent_size = 4
+
+# YAML
+[*.yml]
+indent_style = space
+indent_size = 2
+
+# Cucumber
+[*.feature]
+indent_style = space
+indent_size = 2
