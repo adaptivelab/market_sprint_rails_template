@@ -44,6 +44,8 @@ gem "devise"
 group :test do
   gem "cucumber-rails"
   gem "rspec-rails"
+  gem "webmock"
+  gem "vcr"
 end
 
 group :test, :development do
