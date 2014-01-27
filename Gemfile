@@ -41,6 +41,10 @@ gem "debugger", group: [:development, :test]
 # Add Devise
 gem "devise"
 
+group :development do
+  gem "better_errors"
+end
+
 group :test do
   gem "cucumber-rails"
   gem "rspec-rails"
