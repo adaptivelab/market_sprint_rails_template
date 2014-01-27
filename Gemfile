@@ -32,9 +32,6 @@ end
 # Use ActiveModel has_secure_password
 # gem "bcrypt-ruby", "~> 3.0.0"
 
-# Use unicorn as the app server
-gem "unicorn"
-
 # Use Capistrano for deployment
 # gem "capistrano", group: :development
 
@@ -50,9 +47,13 @@ group :test do
 end
 
 group :test, :development do
-  gem 'sqlite3'
+  gem "sqlite3"
+  gem "dotenv-rails"
 end
 
 group :production, :staging do
-  gem 'pg'
+  gem "pg"
+
+  # Use unicorn as the app server
+  gem "unicorn"
 end
