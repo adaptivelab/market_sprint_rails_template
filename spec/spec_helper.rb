@@ -47,5 +47,15 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
-  config.extend VCR::RSpec::Macros
+  # Add VCR to all tests
+  config.around(:each) do |example|
+    options = example.metadata[:vcr] || {}
+    options = {} if options == true
+    if options[:record] == :skip
+      VCR.turned_off(&example)
+    else
+      name = example.metadata[:full_description].split(/\s+/, 2).join("/").underscore.gsub(/[^\w\/]+/, "_")
+      VCR.use_cassette(name, options, &example)
+    end
+  end
 end
