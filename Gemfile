@@ -48,7 +48,11 @@ end
 group :test do
   gem "cucumber-rails", require: false
   gem "database_cleaner"
+  gem "factory_girl_rails"
+  gem "launchy"
   gem "rspec-rails"
+  gem "selenium-webdriver"
+  gem "timecop"
   gem "webmock"
   gem "vcr"
 end
