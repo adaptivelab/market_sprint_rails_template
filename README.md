@@ -22,6 +22,7 @@ What's in the box?
 | Launchy               | Useful for seeing what your integration test is seeeing (using the save_and_open_page helper method or the 'And show me the page' cucumber helper) |
 | VCR                   | For testing calls to third party URIs               |
 | Better Errors         | For seeing better errors in development             |
+| Binding of Caller     | Allows you to interrogate the local variables at the place where your app exceptioned |
 | Editor Config         | To ensure a consensus of pedantry                   |
 | Bootstrap CSS         | For generic-looking interfaces                      |
 | Less                  | Because Bootstrap                                   |
