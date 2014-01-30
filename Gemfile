@@ -31,6 +31,15 @@ group :doc do
   gem "sdoc", require: false
 end
 
+# Bower support for Rails projects
+gem "bower-rails", "~> 0.6.1"
+
+# Font awesome font for rails
+gem "font-awesome-rails"
+
+gem 'less-rails'
+gem 'therubyracer' # Ruby
+
 # Use ActiveModel has_secure_password
 # gem "bcrypt-ruby", "~> 3.0.0"
 

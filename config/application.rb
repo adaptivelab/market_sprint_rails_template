@@ -24,7 +24,16 @@ module RailsMarketSprintSkeleton
       g.test_framework :rspec
     end
 
-    config.sass.preferred_syntax = :sass
+    # Turn off automatic stylesheet generator
+    config.generators.stylesheets = false
+
+    # Turn off automatic javascripts generator
+    config.generators.javascripts = false
+
+    # Turn off automatic helper generator
+    config.generators.helper = false
+
+    config.assets.paths << "#{Rails.root}/vendor/bower_components"
   end
 end
 

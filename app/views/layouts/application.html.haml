@@ -1,0 +1,18 @@
+!!!
+%html
+    %head
+        %title RailsMarketSprintSkeleton
+        = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+        = javascript_include_tag "application", "data-turbolinks-track" => true
+        = csrf_meta_tags
+
+    %body
+        = render 'shared/navigation'
+        #main{role: "main"}
+            .container
+                .content
+                    .row
+                        .col-xs-12.col-sm-12.col-lg-12
+                            = render 'shared/messages'
+                            = yield
+                    %footer
