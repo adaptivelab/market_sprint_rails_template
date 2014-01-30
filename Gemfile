@@ -3,6 +3,8 @@ source "https://rubygems.org"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
 gem "rails", "4.0.0"
 
+gem "activeadmin", git: "https://github.com/gregbell/active_admin"
+
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 4.0.0"
 
@@ -46,6 +48,7 @@ group :development do
 end
 
 group :test do
+  gem "binding_of_caller"
   gem "cucumber-rails", require: false
   gem "database_cleaner"
   gem "factory_girl_rails"

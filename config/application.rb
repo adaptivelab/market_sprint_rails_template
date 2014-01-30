@@ -27,3 +27,7 @@ module RailsMarketSprintSkeleton
     config.sass.preferred_syntax = :sass
   end
 end
+
+# Active Admin caused some deprecation warnings.
+# http://makandracards.com/makandra/20303-how-to-silence-i18n-enforce_available_locales-deprecation-warnings
+I18n.enforce_available_locales = false

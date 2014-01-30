@@ -16,6 +16,14 @@ describe Page do
       it "is a titleized version of the slug" do
         expect(page.title).to eql(page.slug.titleize)
       end
+
+      describe "when slug is nil" do
+        before { page.slug = nil }
+
+        it "is blank" do
+          expect(page.title).to eql("")
+        end
+      end
     end
   end
 end

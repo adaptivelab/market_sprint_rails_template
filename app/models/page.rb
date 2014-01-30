@@ -6,7 +6,12 @@ class Page < ActiveRecord::Base
 
   def title
     t = read_attribute(:title)
-    t.blank? ? slug.titleize : t
+    t.blank? ? slug_as_title : t
+  end
+
+  protected
+  def slug_as_title
+    slug.blank? ? "" : slug.titleize
   end
 
 end
