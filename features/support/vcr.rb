@@ -1,5 +1,5 @@
 VCR.configure do |c|
-  c.cassette_library_dir = Rails.root.join("features", "cassettes")
+  c.cassette_library_dir = Rails.root.join("/tmp", Rails.application.class.to_s.underscore, "vcr-cassettes", "features")
   c.hook_into :webmock
   c.ignore_localhost = true
 end

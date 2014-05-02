@@ -1,7 +1,21 @@
 Rails Market Sprint App Skeleton
 ================================
 
-This is a Rails app that includes everything we want before we start rapid prototyping during a Market Sprint.  This repo is the base - the application templates are then created from a fork, replacing the occurrences of application name and any other relevant variables with replacement template code.
+This is a Rails app that includes everything we want before we start rapid prototyping during a Market Sprint.
+
+Creating a new application from this template
+---------------------------------------------
+
+First, make sure you have the rails executable and that it is at the same version as that used by this template (4.1.0):
+
+    $ gem install rails -v 4.1.0
+
+    $ rails new my_app_name -m https://raw.githubusercontent.com/adaptivelab/market_sprint_rails_template/master/template.rb
+
+Applying or re-applying this template to an existing app
+-----------------------------------------
+
+    $ bundle exec rake rails:template LOCATION=https://raw.githubusercontent.com/adaptivelab/market_sprint_rails_template/master/template.rb
 
 What's in the box?
 ------------------
@@ -9,7 +23,7 @@ What's in the box?
 | Feature               | Description                                         |
 | --------------------- | --------------------------------------------------- |
 | Ruby 2.0.0            | Ruby version that comes with our current Boxen.     |
-| Rails 4.0.0           | Current latest version of Rails                     |
+| Rails 4.1.0           | An out-of-date version of Rails                     |
 | Devise                | User authentication                                 |
 | Active Admin          | Administration interface                            |
 | User model            | A basic user model (email + password)               |
@@ -21,6 +35,8 @@ What's in the box?
 | Heroku-ready          | Adds rails_12factor, unicorn and postgres to be Heroku-ready out of the box |
 | Launchy               | Useful for seeing what your integration test is seeeing (using the save_and_open_page helper method or the 'And show me the page' cucumber helper) |
 | VCR                   | For testing calls to third party URIs               |
+| PhantomJS             | So that integration tests work on Travis            |
+| Selenium Webdriver    | Which you can use to visually see integration tests |
 | Better Errors         | For seeing better errors in development             |
 | Binding of Caller     | Allows you to interrogate the local variables at the place where your app exceptioned |
 | Editor Config         | To ensure a consensus of pedantry                   |
@@ -42,24 +58,17 @@ To add in a page that's just a static image (or even a chain of pages), you can 
 
 The page slug determines the URL it will live at.  The relative URL will be "/pages/my-slug", where 'my-slug' is your slug.  Obvs.  Using that knowledge, you can chain pages of static images together, by entering another /pages/{slug} URL in as the next_url.  Simples!
 
+Production checklist
+--------------------
 
-How do I make a template out of this?
--------------------------------------
+Make sure you set the following environment variables:
 
-To turn this into something re-usable, you just need to replace all occurrences of the application name.
-
-### By Hand
-
-* Fork the repo.
-* Find and replace 'RailsMarketSprintSkeleton' with your app's camel-cased name.
-* Find and replace 'rails_market_sprint_skeleton' with your app's underscored name.
-
+**SECRET_KEY_BASE**
 
 What if I want to add to this template?
 ---------------------------------------
 
-Pull request!
-
+Pull request!  Make changes to this app, ensure they work.  Then update the template.rb file if you need to.  To speed up trying out chages, you can use the local path to the template.rb instead of the URL when applying the template.
 
 License
 -------

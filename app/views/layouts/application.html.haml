@@ -1,23 +1,15 @@
 !!!
+
 %html
-    %head
-        %title RailsMarketSprintSkeleton
-        = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-        = javascript_include_tag "application", "data-turbolinks-track" => true
-        = csrf_meta_tags
 
-    %body
-        = render 'shared/navigation'
+%head
+  %title= Rails.application.class.parent.to_s.titlecase
+  = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+  = javascript_include_tag "application", "data-turbolinks-track" => true
+  = csrf_meta_tags
 
-        #main{role: "main"}
-            .container
-                .content
-                    .row
-                        .col-xs-12.col-sm-12.col-lg-12
-                            = render 'shared/messages'
+%body
+  %p.notice= notice
+  %p.alert= alert
 
-                            - if user_signed_in?
-                                = link_to "Sign out", destroy_user_session_path, method: :delete
-
-                            = yield
-                    %footer
+  = yield

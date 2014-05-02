@@ -51,6 +51,7 @@ end
 #   end
 #
 
+require 'capybara/poltergeist'
 Capybara.register_driver :poltergeist do |app|
    options = { js_errors: false,
                inspector: true
