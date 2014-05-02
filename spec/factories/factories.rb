@@ -4,14 +4,14 @@ FactoryGirl.define do
 
   factory :user do
     email "test@example.com"
-    password "tester"
-    password_confirmation "tester"
+    password "tester123"
+    password_confirmation "tester123"
   end
 
   factory :page do
     slug "example_page"
     title "Example Page"
-    next_url "http://next.com/"
+    next_url "https://www.adaptivelab.com/"
     image_url "http://www.tehcute.com/pics/201110/marshmellow-kitten-big.jpg"
     layout "empty"
 

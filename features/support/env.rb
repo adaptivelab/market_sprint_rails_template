@@ -51,6 +51,7 @@ end
 #   end
 #
 
+require 'capybara/poltergeist'
 Capybara.register_driver :poltergeist do |app|
    options = { js_errors: false,
                inspector: true
@@ -58,7 +59,7 @@ Capybara.register_driver :poltergeist do |app|
    Capybara::Poltergeist::Driver.new(app, options)
  end
 
-Capybara.javascript_driver = :poltergeist
+Capybara.javascript_driver = :selenium
 
 # Possible values are :truncation and :transaction
 # The :transaction strategy is faster, but might give you threading problems.

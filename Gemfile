@@ -57,7 +57,7 @@ group :test do
   gem "launchy", "2.4.2"
   gem "poltergeist", "1.5.0"
   gem "rspec-rails", "2.14.0"
-  gem "selenium-webdriver", "2.37.0"
+  gem "selenium-webdriver", ">= 2.37.0"
   gem "timecop", "0.6.3"
   gem "webmock", "1.15.2"
   gem "vcr", "2.7.0"
