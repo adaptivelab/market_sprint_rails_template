@@ -58,6 +58,28 @@ To add in a page that's just a static image (or even a chain of pages), you can 
 
 The page slug determines the URL it will live at.  The relative URL will be "/pages/my-slug", where 'my-slug' is your slug.  Obvs.  Using that knowledge, you can chain pages of static images together, by entering another /pages/{slug} URL in as the next_url.  Simples!
 
+Compass
+-------
+You can now add and edit sass stylesheets in the app/assets/sass subdirectory of your project.
+
+Sass files beginning with an underscore are called partials and won't be
+compiled to CSS, but they can be imported into other sass stylesheets.
+
+You can configure your project by editing the config.rb configuration file.
+
+You must compile your sass stylesheets into CSS when they change.
+
+This can be done in one of the following ways:
+1. To compile on demand:
+  * compass compile [path/to/project]
+2. To monitor your project for changes and automatically recompile:
+  * compass watch [path/to/project]
+
+More Resources:
+* Website: http://compass-style.org/
+* Sass: http://sass-lang.com
+* Community: http://groups.google.com/group/compass-users
+
 Production checklist
 --------------------
 

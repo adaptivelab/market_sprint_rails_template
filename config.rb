@@ -1,14 +1,10 @@
 # Require any additional compass plugins here.
-# You can view doc on this file at http://compass-style.org/help/tutorials/configuration-reference/
 
-# Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "app/assets/stylesheets"
-sass_dir = "app/assets/sass"
-images_dir = "iapp/assets/mages"
-javascripts_dir = "app/assets/javascripts"
-
-preferred_syntax = :sass
+css_dir = "stylesheets"
+sass_dir = "sass"
+images_dir = "images"
+javascripts_dir = "javascripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
