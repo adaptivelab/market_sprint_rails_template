@@ -5,8 +5,11 @@ gem "rails", "4.1.0"
 
 gem "activeadmin", git: "https://github.com/adaptivelab/active_admin"
 
-# Use SCSS for stylesheets
+# Use SASS for stylesheets
 gem "sass-rails", "~> 4.0.3"
+
+# Use Compass Framework
+gem "compass-rails"
 
 # Use Haml for the Hammely bits
 gem "haml-rails", "0.5.3"
@@ -29,9 +32,6 @@ gem "jbuilder", "~> 2.0"
 # bundle exec rake doc:rails generates the API under doc/api.
 gem "sdoc", "~> 0.4.0", require: false
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
 # Bower support for Rails projects
 gem "bower-rails", "~> 0.6.1"
 
@@ -47,14 +47,14 @@ gem 'therubyracer' # Ruby
 # Use Capistrano for deployment
 # gem "capistrano", group: :development
 
-# Use debugger
-gem "debugger", "1.6.3", group: [:development, :test]
-
 # Add Devise
 gem "devise", "3.2.2"
 
 group :development do
   gem "better_errors", "1.1.0"
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
 end
 
 group :test do
@@ -75,6 +75,9 @@ end
 group :test, :development do
   gem "sqlite3", ">= 0"
   gem "dotenv-rails", "0.9.0"
+
+  # Use debugger
+  gem "debugger", "1.6.3"
 end
 
 group :production, :staging do
