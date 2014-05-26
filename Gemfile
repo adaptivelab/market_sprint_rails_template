@@ -9,7 +9,7 @@ gem "activeadmin", git: "https://github.com/adaptivelab/active_admin"
 gem "sass-rails", "~> 4.0.3"
 
 # Use Compass Framework
-gem "compass-rails"
+gem "compass-rails", "1.1.7"
 
 # Use Haml for the Hammely bits
 gem "haml-rails", "0.5.3"
