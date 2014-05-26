@@ -78,6 +78,7 @@ inside "db" do
   inside "migrate" do
     copy_file "20140127195543_devise_create_users.rb"
     copy_file "20140129174540_create_pages.rb"
+    copy_file "20140129183232_devise_create_admin_users.rb"
   end
 end
 
