@@ -17,6 +17,7 @@ eval IO.read(File.join(File.expand_path(File.dirname(__FILE__)), "Gemfile"))
 
 copy_file ".editorconfig"
 copy_file ".ruby-version"
+copy_file ".travis.yml"
 copy_file ".phantom-version"
 
 inside "config" do
